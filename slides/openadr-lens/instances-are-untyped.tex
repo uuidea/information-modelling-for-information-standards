@@ -1,0 +1,23 @@
+\begin{frame}{Instance data has no type}
+  \framesubtitle{The validator checks \emph{structure} — not which thing a thing is}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \textbf{What the validator has — one schema}\\[0.4em]
+      \lstinputlisting[style=code, basicstyle=\ttfamily\tiny, columns=fullflexible]{code/equipment-schema.json}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \textbf{What arrives in the exchange — two instances}\\[0.4em]
+      \lstinputlisting[style=code, basicstyle=\ttfamily\tiny, columns=fullflexible]{code/equipment-instances.json}
+      \vspace{0.2em}
+      \small The first is a \emph{Substation}; the second a \emph{Transformer}.
+      The payload never says which — only the sender knows.
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \small
+  \textbf{The verdict:} both instances validate \alert{$\checkmark$} —
+  including the Transformer, where a Substation was expected.
+  The validator can only check that the structure matches, so it cannot decide
+  which \emph{type} the data represents. The one that should not pass,
+  \alert{passes}.
+\end{frame}

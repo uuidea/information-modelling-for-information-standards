@@ -1,0 +1,45 @@
+\begin{frame}{The normative artifact is a serialization of the model}
+  \framesubtitle{What an OpenAPI YAML is — and what follows when it \emph{is} the standard}
+
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \textbf{What the artifact is}\\[0.3em]
+      \begin{itemize}\scriptsize
+        \item a description of \emph{one} HTTP API: paths, operations,
+              parameters, security
+        \item the payloads: \textbf{JSON Schemas} — \texttt{required},
+              \texttt{type}, \texttt{range}, \texttt{enum}, nesting
+        \item in the stack of this morning: \textbf{L3} — the serialization
+        \vspace{0.25em}
+        \item the format's only structural machinery: composition
+              (\texttt{allOf}/\texttt{oneOf}), nesting, cross-references
+              to other schemas
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \textbf{What follows when the standard is that}\\[0.3em]
+      \begin{itemize}\scriptsize
+        \item \textbf{Concepts live as payload schemas.} \texttt{Program},
+              \texttt{Event}, \texttt{Reading}, \ldots are defined in the
+              context of the messages they appear in. The format gives no
+              concept identity, no inheritance, no disjointness — nothing
+              another standard can reference or import
+        \item \textbf{The model is bound to one serialization.} There is no
+              \emph{normative} artifact that says what these concepts are,
+              independent of HTTP + JSON
+        \item \textbf{Two descriptions of the same model exist.} One
+              normative (the YAML), one prose (``Definitions''). The
+              standard's own rule when they differ: the YAML
+              ``supersedes any statements made in other documentation''
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.25em}
+  \begin{alertblock}{No verdict here}
+    Nothing above is a reading of openADR against a goal — it is what
+    follows, by construction, from the standard defining its normative
+    artifact as a serialization. What that does to identity — and which
+    of today's requirements apply to it — is the rest of this section.
+  \end{alertblock}
+\end{frame}

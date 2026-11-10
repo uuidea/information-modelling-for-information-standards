@@ -1,0 +1,30 @@
+\begin{frame}{Towards technology-agnostic information standards}
+    \framesubtitle{Meta-model transformations}
+    
+    \AddToShipoutPictureFG*{
+        \AtPageUpperLeft{\put(-5,-15){\makebox[\paperwidth][r]{Requirement 2}}}  
+        }%  
+
+    \begin{table}[overview of supported constructs for different meta-models]
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{lccccccccc}
+            & \multicolumn{1}{l|}{Open World Assumption}                                                     & \multicolumn{2}{l}{Closed World Assumption}  \\\cline{2-8}
+        \textbf{Construct}       & \textbf{RDFS/OWL}        & \textbf{SHACL}                      & \textbf{LinkML}                          & \textbf{UML(xmi)}                & \textbf{\begin{tabular}[c]{@{}c@{}}JSON \\ Schema\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Apache \\ Avro\end{tabular}}     & \textbf{SQL}               & \textbf{XSD}     \\ \hline
+        data structure           & \multicolumn{1}{l}{}     & \tiny{Class}                        & \tiny{Class}                             & \multirow{2}{*}{\tiny{Class}} & \multirow{2}{*}{\tiny{object}}                                    & \multirow{2}{*}{\tiny{record}}                                        & \multirow{2}{*}{\tiny{table}}     & \multirow{2}{*}{\tiny{complexType}} \\ \cline{1-3}
+        set (class)              & \tiny{Class}             &                                     & \tiny{class\_uri}                        &                               &                                                                   &                                                                       &                                   &                    \\ \hline
+        individual               & \tiny{Resource}          & \tiny{Resource}                     & \tiny{permissible\_values}               & \tiny{Instance}               & \tiny{instance}                                                   & implied                                                               & \tiny{record}                     & \tiny{complex element}                  \\ \hline
+        role                     & \tiny{Property}          & \tiny{PropertyShape}                & \tiny{Slot}                              & \tiny{Property}               & \tiny{property}                                                   & \tiny{field}                                                          & \tiny{column}                     & \tiny{attribute}                  \\ \hline
+        datatype                 & \tiny{DataType}          & \tiny{DatatypeConstraintComponent}  & \tiny{Type}                              & \tiny{Primitve}               & \tiny{basic type}                                                 & \tiny{Primitive Type}                                                 & \tiny{data type}                  & \tiny{Datatype}    \\ \hline
+        set membership           & \tiny{type}              &                                     &                                          & \tiny{type}                   &                                                                   &                                                                       & implied                           & implied                  \\ \hline
+        set inclusion            & \tiny{subClassOf}        & \tiny{and***}                       & \tiny{is\_a}                             & \tiny{Generalization***}      & \tiny{allOf***}                                                   &                                                                       & \tiny{union}                      & \tiny{extension***}           \\ \hline
+        set equivalence          & \tiny{EquivalentClass}   &                                     &                                          &                               &                                                                   &                                                                       &                                   &                    \\ \hline
+        set disjunctiveness      & \tiny{disjointWith}      &                                     &                                          & implied                       & implied                                                           & implied                                                               & implied                           & implied            \\ \hline
+        cardinality restrictions & \tiny{min/maxCardinality}& \tiny{min/maxCount}                 & \tiny{minimum/maximum\_cardinality}      & \tiny{lower/upperValue}       & \tiny{min/maxItems}                                               & limited                                                               & limited                           & \tiny{min/maxOccurs}                 
+        \end{tabular}
+        }
+        %\caption{ *:open world assumption applies, **: closed world assumption applies,***: more of a part-whole relationship at data structure level}
+        \end{table}
+\end{frame}
+
+
+

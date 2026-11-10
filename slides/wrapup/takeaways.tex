@@ -1,0 +1,27 @@
+\begin{frame}{Takeaways — Day 1}
+
+  \setlength{\itemsep}{2.5pt}
+  \setlength{\parsep}{0pt}
+
+  \begin{enumerate}
+    \item \textbf{Defining an information standard}
+    \begin{itemize}
+      \item interoperability is a community quality; a standard is what they decide to make \emph{testable}
+    \end{itemize}
+    \pause
+    \item \textbf{The best practice stack}
+    \begin{itemize}
+      \item L0 concepts (SKOS) $\rightarrow$ L1 open-world vocabulary $\rightarrow$ L2 profile $\rightarrow$ L3 \emph{derived} artifacts; schema $\neq$ meaning
+      \item MOF: choose a pivot model, don't chase one; validate from the profile (SHACL)
+      \item proven in practice: Netbeheer Nederland runs this with CIM/CGMES
+    \end{itemize}
+    \pause
+    \item \textbf{openADR 3.0 through that lens}
+    \begin{itemize}
+      \item the normative core of the standard is a \emph{serialization}: the OpenAPI YAML,
+            with the model defined inside it
+      \item the three requirements of the day attach to exactly that choice:
+            multiple use cases, technology-independence, no empty sets
+    \end{itemize}
+  \end{enumerate}
+\end{frame}

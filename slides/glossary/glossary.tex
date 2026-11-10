@@ -1,0 +1,47 @@
+\begin{frame}{Glossary — the words we'll use today (1/2)}
+  \framesubtitle{One table, so everyone means the same thing by the same word}
+  \scriptsize
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{center}
+  \begin{tabular}{@{}p{3.3cm}p{11.5cm}@{}}
+    \toprule
+    \textbf{Term} & \textbf{What it is}\\
+    \midrule
+    \textbf{Interoperability} & A \emph{community} quality: systems able to work together \emph{without modification}.\\
+    \textbf{Standard} & A reference point against which other things can be evaluated or compared\\
+    \textbf{Model} & Something that a copy can be based on because it is an extremely good example of its type \\
+    \textbf{Information model (IM)} & The \emph{model} of a domain's information. abbreviated \emph{IM}.\\
+    \textbf{Business Terms} & The natutal language definitions of the things we talk about.\\
+    \textbf{Vocabulary Model} & information model that relies on set theoretical semantics to describe a domain. Built on the \emph{open} world; reusable across use cases\\
+    \textbf{Constraint model} & The \emph{data structure} of a use case: what fields exist and how much of each; built on the \emph{closed} world.\\
+    \textbf{Profile} & A reference to an information model \emph{plus} added constraints (scope, cardinality, value-space).\\
+    \textbf{Serialization} & A concrete \emph{exchange format} for a specific pattern: Avro, JSON Schema, SQL DDL. Also called \emph{schema} or \emph{artifact} (L3).\\
+    \textbf{Meta-model} & A model \emph{of} models (UML, OWL, SHACL, JSON Schema\ldots).\\
+    \textbf{Meta-meta-model} & A model of meta-models (MOF, RDF/S).\\
+    \textbf{Pivot model} & A chosen meta-model with enough expressivity to transform to and from the others.\\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Glossary — the words we'll use today (2/2)}
+  \framesubtitle{One table, so everyone means the same thing by the same word}
+  \scriptsize
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{center}
+  \begin{tabular}{@{}p{3.3cm}p{11.5cm}@{}}
+    \toprule
+    \textbf{Term} & \textbf{What it is}\\
+    \midrule
+    \textbf{Ontology} & A formal, machine-interpretable account of meaning and relationships (ISA, disjointness) --- the terms other standards can align to.\\
+    \textbf{Upper ontology} & A high-level classification of reality (BFO, nen-2660) used as a common yardstick to spot semantic conflicts.\\
+    \textbf{Alignment / mapping} & A documented, reviewable link between two models' terms (\texttt{owl:equivalentClass}, \texttt{skos:closeMatch}).\\
+    \textbf{SGAM} & Smart Grid Architecture Model: Business / Function / Information / Communication / Component layers.\\
+    \textbf{CIM / CGMES} & IEC 61970 CIM is the energy \emph{vocabulary}; CGMES is the ENTSO-E profile on top of it.\\
+    \textbf{mRID} & A globally unique, persistent identifier (IEC 61970-552) that survives change.\\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{frame}

@@ -1,0 +1,12 @@
+[
+  {
+    "mRID" : "US.EPE:SUB.104200",
+    "name" : "Northgate 138/13 kV",
+    "nominalVoltage" : 138000
+  },
+  {
+    "mRID" : "US.EPE:TRF.0077",
+    "name" : "TG-3",
+    "nominalVoltage" : 138000
+  }
+]

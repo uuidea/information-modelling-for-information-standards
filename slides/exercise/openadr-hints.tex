@@ -1,0 +1,20 @@
+\begin{frame}{Exercise debrief: what a mapping might look like}
+  \framesubtitle{A sketch — not one single right answer}
+
+  \begin{table}
+    \begin{tabular}{lp{11cm}}
+      \rowcolor[HTML]{dab785}
+      {\color{newgray}\textbf{SGAM layer}} & {\color{newgray}\textbf{openADR material on that layer}} \\
+      Business & Flexibility product as market offering; congestion relief as service; value = avoided investments, reliability \\
+      Function & Bidding/set-pointing loop; capacity calculation; dispatching orders; settlement \& reporting \\
+      Information & \alert{Capabilities, set-points, actuals, status, identities (who/what/where)} — \emph{where is the shared model?} \\
+      Communication & openADR (REST/JSON), transport, security (OAuth), messaging semantics \\
+      Component & Devices (chargers, BMS), DER controller, DSO grid system, aggregator platform \\
+    \end{tabular}
+  \end{table}
+
+  \vspace{0.2cm}
+  \pause
+  What usually shows up: strong \textbf{Business/Function/Communication}, thin \textbf{Information}.
+  That thinness is exactly where Day 2 lives.
+\end{frame}

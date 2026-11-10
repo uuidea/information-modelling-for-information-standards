@@ -1,0 +1,58 @@
+\ProvidesPackage{mybusinessbeamertheme}[2023/10/05 My Business Beamer Theme]
+
+% Colors definition
+\definecolor{primary}{HTML}{031d44}
+\definecolor{secondary}{HTML}{04395e}
+\definecolor{accent}{HTML}{70a288}
+\definecolor{tertiary}{HTML}{dab785}
+\definecolor{quaternary}{HTML}{d5896f}
+
+% Theme setup
+\usetheme{Madrid}  % Base theme (you can change this to another base theme if preferred)
+
+% Custom color definitions for the theme
+\setbeamercolor{palette primary}{fg=white, bg=primary}
+\setbeamercolor{palette secondary}{fg=white, bg=secondary}
+\setbeamercolor{palette tertiary}{fg=white, bg=tertiary}
+\setbeamercolor{palette quaternary}{fg=white, bg=quaternary}
+
+% Additional color assignments
+\setbeamercolor{itemize item}{fg=accent}         % Color for bullets in lists
+\setbeamercolor{enumerate item}{fg=quaternary}   % Color for enumerated items
+\setbeamercolor{alerted text}{fg=tertiary}       % Color for alerted text (e.g., \alert)
+\setbeamercolor{block title}{fg=white, bg=secondary}  % Color for block titles
+\setbeamercolor{block body}{fg=black, bg=tertiary!20}   % Lighter version of tertiary color
+
+% Logo setup
+\pgfdeclareimage[width=1cm]{mylogo}{figs/mylogo.png}
+\logo{\pgfuseimage{mylogo}}
+
+% Custom fonts (optional)
+%\usepackage{fontspec}
+%\setmainfont{Arial}
+
+% Other customizations
+\setbeamercolor{footline}{fg=tertiary, bg=primary}  % Footline color scheme
+\setbeamerfont{footline}{size=\tiny}              % Font size for footline
+
+% Additional theme refinements (optional)
+\setbeamertemplate{navigation symbols}{}          % Remove navigation symbols
+\setbeamertemplate{frametitle}[default][left]      % Left-aligned frame titles
+
+
+
+\setbeamertemplate{footline}{
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+            \usebeamerfont{title in head/foot}\insertshorttitle
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+            \usebeamerfont{date in head/foot}
+            \copyright uuidea \href{https://creativecommons.org/licenses/by-sa/4.0/deed.en}{cc by-sa 4.0} 
+        \end{beamercolorbox}}%
+    \vskip0pt%
+}

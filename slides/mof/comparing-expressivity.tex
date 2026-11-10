@@ -1,0 +1,29 @@
+\begin{frame}{Comparing expressivity}
+
+    \AddToShipoutPictureFG*{
+        \AtPageUpperLeft{\put(-5,-15){\makebox[\paperwidth][r]{Requirement 2}}}  
+        }%
+ 
+\begin{table}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{lcccccccc}
+        & \multicolumn{1}{l|}{Open World Assumption}                                                     & \multicolumn{2}{l}{Closed World Assumption}  \\\cline{2-8}
+    \textbf{Construct}       & \textbf{RDFS/OWL}    & \textbf{SHACL} & \textbf{LinkML}   & \textbf{UML}       & \textbf{\begin{tabular}[c]{@{}c@{}}JSON \\ Schema**\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Apache \\ Avro\end{tabular}}   & \textbf{SQL}       & \textbf{XSD}          \\ \hline
+    data structure           & \multicolumn{1}{l}{} & x              & x                 & \multirow{2}{*}{x} & \multirow{2}{*}{x}                                                & \multirow{2}{*}{x}                                                & \multirow{2}{*}{x} & \multirow{2}{*}{x}    \\ \cline{1-4}
+    set (class)              & x                    &                & kinda...          &                    &                                                                   &                                                                   &                    &                       \\ \hline
+    individual               & x                    & x              & x                 & x                  & x                                                                 & x                                                                 & x                  & x                     \\ \hline
+    role                     & x                    & x              & x                 & x                  & x                                                                 & x                                                                 & x                  & x                     \\ \hline
+    datatype                 & x                    & x              & x                 & x                  & x                                                                 & x                                                                 & x                  & x                     \\ \hline
+    set membership           & x                    &                &                   & x                  &                                                                   &                                                                   & x                  & x                     \\ \hline
+    set inclusion            & x                    & kinda...       & kinda...          & kinda...           & kinda...                                                          &                                                                   & x                  & kinda...              \\ \hline
+    set equivalence          & x                    &                &                   &                    &                                                                   &                                                                   &                    &                       \\ \hline
+    set disjunctiveness      & x                    &                &                   & implied            & implied                                                           & implied                                                           & implied            & implied               \\ \hline
+    cardinality restrictions & x                    & x              & x                 & x                  & x                                                                 & limited                                                           & limited            & x                    
+    \end{tabular}
+    }
+    %\caption{ *:open world assumption applies, **: closed world assumption applies}
+\end{table}
+    
+
+    
+\end{frame}

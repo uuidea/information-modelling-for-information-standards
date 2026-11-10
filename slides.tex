@@ -1,0 +1,170 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{mybusinessbeamertheme}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\setbeamertemplate{theorems}[numbered]
+\newtheorem*{mydef}{Definition}
+\newtheorem{requirement}{Req.}
+\usepackage{amssymb}
+\usepackage{epigraph}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{eso-pic}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% Code listing style (from the data-and-information-modelling deck)
+\definecolor{codebg}{HTML}{f2f5f7}
+\definecolor{codecomment}{HTML}{6b7a88}
+\definecolor{codekey}{HTML}{04395e}
+\definecolor{codestr}{HTML}{b5651d}
+\definecolor{codekw}{HTML}{70a288}
+\lstdefinestyle{code}{
+  basicstyle=\ttfamily\scriptsize,
+  commentstyle=\color{codecomment}\itshape,
+  stringstyle=\color{codestr},
+  breaklines=true,
+  breakatwhitespace=true,
+  frame=single,
+  backgroundcolor=\color{codebg},
+  tabsize=2,
+  showstringspaces=false,
+  columns=fixed,
+  xleftmargin=1.5em, xrightmargin=1em,
+  framesep=3pt
+}
+
+% Colours used by the IntegratingInformationStandards slides
+\definecolor{newgray}{HTML}{001D4A}
+\definecolor{newdarkblue}{HTML}{27476E}
+\definecolor{newmidblue}{HTML}{006992}
+\definecolor{newlightblue}{HTML}{EAF8BF}
+\definecolor{neworange}{HTML}{ECA400}
+
+% Column types used by the IntegratingInformationStandards tables
+\newcolumntype{a}{>{\columncolor{newlightblue}}c}
+\newcolumntype{o}{>{\columncolor{neworange}}c}
+
+\AtBeginEnvironment{requirement}{%
+  \setbeamercolor{block title}{use=example text,fg=newgray}
+  \setbeamercolor{block body}{parent=normal text,use=block title example,bg=newlightblue}
+}
+
+\title{Standardization, Interoperability \& Information Modelling}
+\subtitle{Session 1 — what it means to define an information standard, and looking at openADR through that lens}
+\author{Joep van Genuchten, uuidea}
+\date{November 10, 2026}
+
+\begin{document}
+
+\frame{\titlepage}
+\include{slides/whoami/whoami}
+% \include{slides/disclaimer/disclaimer}
+\include{slides/overview/overview}
+\include{slides/glossary/glossary}
+
+\section{What interoperability is — and what it takes}
+\include{slides/context/definitions}
+\include{slides/context/converter-box}
+\include{slides/context/cables}
+\include{slides/context/integration}
+\include{slides/context/usb-c}
+\include{slides/context/standards-proliferation}
+\include{slides/context/communities-solo}
+\include{slides/context/communities-together}
+
+\section{SGAM and where openADR lives on it}
+\include{slides/sgam/sgam}
+\include{slides/sgam/layers-explained}
+\include{slides/exercise/openadr-task}
+% \include{slides/exercise/openadr-hints}
+% \include{slides/exercise/openadr-whats-missing}
+
+\section{The Ship of Theseus, master data, and meaning}
+\include{slides/theseus/paradox}
+\include{slides/theseus/mdm}
+
+\section{Information modelling 101}
+\include{slides/im-101/three-layers}
+\include{slides/im-101/standing}
+\include{slides/im-101/rdf-triple}
+\include{slides/im-101/skos}
+\include{slides/im-101/rdfs-owl}
+\include{slides/im-101/shacl}
+
+\section{What it means to define an information standard}
+\include{slides/standards/challenges}
+\include{slides/standards/requirements}
+\include{slides/standards/roadmap}
+
+\section{Requirement 1: kinds of information models}
+\include{slides/kinds/requirement-1-epigraph}
+\include{slides/kinds/semantic-triangle}
+\include{slides/kinds/switches-examples}
+\include{slides/kinds/vocab-constraint-definitions}
+\include{slides/kinds/model-taxonomy}
+\include{slides/kinds/addressing-requirement-1}
+
+\section{Requirement 2: MOF, expressivity, and transformation}
+\include{slides/mof/requirement-2-epigraph}
+\include{slides/mof/models-of-models}
+\include{slides/mof/expressivity-constructs}
+\include{slides/mof/comparing-expressivity}
+\include{slides/mof/choosing-pivot-model}
+\include{slides/mof/metamodel-transformations}
+\include{slides/mof/addressing-requirement-2}
+
+\section{Ontology, meaning, and the open world}
+% \include{slides/ontology/meaning}
+\include{slides/ontology/definitions-cwa-owa}
+\include{slides/ontology/meaning-and-interpretation}
+
+\section{Requirement 3: ontology alignment and upper ontologies}
+\include{slides/alignment/requirement-3-epigraph}
+\include{slides/alignment/outage-example}
+\include{slides/alignment/upper-ontologies-intro}
+\include{slides/alignment/upper-ontologies-limitations}
+\include{slides/alignment/upper-ontologies-example}
+\include{slides/alignment/fixing-cim-outage}
+% \include{slides/alignment/techniques}
+\include{slides/alignment/addressing-requirement-3}
+
+\section{In practice: one exchange, from the model (L1) to the artifacts (L3)}
+\include{slides/exchange/example-intro}
+\include{slides/exchange/example-information-model}
+\include{slides/profiles/layer2-profile}
+\include{slides/profiles/example-profile}
+\include{slides/exchange/artifact-avro}
+\include{slides/exchange/artifact-jsonschema}
+\include{slides/exchange/artifact-sql}
+\include{slides/exchange/consistency}
+\include{slides/exchange/toolchain}
+\include{slides/exchange/data-uitwisseling}
+
+\section{How Netbeheer Nederland manages profiles and schemas}
+\include{slides/nbnl/cim-cgmes}
+\include{slides/nbnl/profiles-samenhang}
+\include{slides/nbnl/practice}
+
+\section{The yardstick, applied: openADR 3.0}
+\include{slides/openadr-lens/anatomy}
+% \include{slides/openadr-lens/yaml-serialization}
+\include{slides/openadr-lens/instances-are-untyped}
+% \include{slides/openadr-lens/serialization-limits}
+\include{slides/openadr-lens/applying-requirements}
+
+\section{Takeaways}
+\include{slides/wrapup/takeaways}
+\include{slides/wrapup/conclusion-standards}
+\include{slides/wrapup/day2-preview}
+
+\section{Q \& A}
+\include{slides/thankyou/thankyou}
+
+\end{document}

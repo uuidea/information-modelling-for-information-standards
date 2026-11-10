@@ -1,0 +1,16 @@
+{
+  "name" : "Analog",
+  "type" : "record",
+  "namespace" : "com.grid.lvmeas",
+  "fields" : [
+    { "name" : "mRID", "type" : [ "null", "string" ] },
+    { "name" : "phases",
+      "type" : { "type" : "enum", "name" : "PhaseCode",
+                 "symbols" : [ "A","B","C","AN","BN","CN","N" ] } },
+    { "name" : "unitSymbol",
+      "type" : { "type" : "enum", "name" : "UnitSymbol",
+                 "symbols" : [ "V","A","VA","W" ] } },
+    { "name" : "AnalogValues",
+      "type" : { "type" : "array", "items" : "AnalogValue" } }
+  ]
+}

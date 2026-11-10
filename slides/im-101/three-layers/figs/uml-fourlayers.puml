@@ -1,0 +1,20 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam component {
+  RoundCorner 8
+  BorderColor #04395e
+}
+
+component "L0  CONCEPT HIERARCHY\nSKOS vocabulary\n(terms L1 reuses)" as L0 #d9e4c8
+component "L1  INFORMATION MODEL\nRDFS / OWL\n(open world, reusable, aligned to CIM)" as L1 #b9d4cf
+component "L2  PROFILE\nLinkML profile over the IM\n(closed world, exchange-specific)" as L2 #f0d9b5
+component "Avro\n(streaming)" as A1 #f0e2cc
+component "JSON Schema / OpenAPI\n(request-response)" as A2 #f0e2cc
+component "SQL DDL\n(batch / warehouse)" as A3 #f0e2cc
+
+L0 -down-> L1 : imports
+L1 -down-> L2 : imports, aligns URIs
+L2 -down-> A1 : linkml-avro
+L2 -down-> A2 : linkml-jsonschema
+L2 -down-> A3 : linkml-sql
+@enduml

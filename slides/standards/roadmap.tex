@@ -1,0 +1,30 @@
+\subsection{Roadmap}
+\begin{frame}{Roadmap: how the rest of today addresses the requirements}
+  \framesubtitle{One requirement at a time — then an \textit{in practice} act applying them all}
+
+  \setlength{\tabcolsep}{5pt}
+  \renewcommand{\arraystretch}{1.3}
+  \begin{center}
+    \footnotesize
+    \begin{tabular}{@{}p{4.8cm}p{7.0cm}@{}}
+      \toprule
+      \textbf{Requirement} & \textbf{Addressed by}\\
+      \midrule
+      \textbf{Req. \ref{req:universal}} --- serve multiple use cases &
+        Kinds of information models: separating \emph{vocabulary} from \emph{constraint};
+        later: profiles as use-case-specific L2 models\\
+      \textbf{Req. \ref{req:technology}} --- technology-agnostic &
+        MOF: metamodels, expressivity, choosing a \emph{pivot model},
+        metamodel transformations; later: generated artifacts (Avro, JSON Schema, SQL)\\
+      \textbf{Req. \ref{req:consistent}} --- no logical inconsistencies &
+        Upper ontologies \& ontology alignment: spotting and fixing semantic conflicts (the
+        \texttt{cim:Outage} example)\\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \vspace{0.1cm}
+  \begin{block}{The goal}
+    A practical guide to how to meet all these requirements. Looking at how Netbeheer Nederland addresses them. And finally looking back at openADR.
+  \end{block}
+\end{frame}

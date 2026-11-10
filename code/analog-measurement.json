@@ -1,0 +1,17 @@
+{
+  "$id" : "https://grid.example/schemas/analog-measurement",
+  "type" : "object",
+  "required" : [ "mRID", "AnalogValues" ],      /* from the PROFILE */
+  "properties" : {
+    "mRID" : { "$ref" : ".../schemas/mRID" },
+    "phases" : { "enum" : [ "A","B","C","AN","BN","CN","N" ] },
+    "unitSymbol" : { "enum" : [ "V","A","VA","W" ] },
+    "AnalogValues" : { "type" : "array", "items" : {
+      "required" : [ "timeStamp", "value" ],    /* from the PROFILE */
+      "properties" : {
+        "timeStamp" : { "type" : "integer" },
+        "value"     : { "type" : "number" }
+      }
+    } }
+  }
+}

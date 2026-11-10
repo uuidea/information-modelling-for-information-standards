@@ -1,0 +1,12 @@
+\begin{frame}{A real example: LV measurement events}
+	Low-voltage measurement values published on a Kafka topic.
+	\vspace{0.4em}
+	\begin{itemize}
+		\item The current schema: an Avro file. 
+		\item The same information is also stored in a warehouse (Postgres) and exposed via an HTTP query API
+		\item Today these three exist side by side, maintained \emph{by hand}, and they occasionally disagree
+	\end{itemize}
+	\begin{block}{We will trace one event through L1, L2, L3}
+	One event $\approx$ \emph{one sensor, one terminal, several measurements, several values}.
+	\end{block}
+\end{frame}

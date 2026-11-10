@@ -1,0 +1,37 @@
+\begin{frame}{openADR 3.0 against the three requirements}
+  \framesubtitle{The requirements as defined earlier in this deck — the standard as defined}
+
+  \scriptsize
+  \setlength{\tabcolsep}{5pt}
+  \renewcommand{\arraystretch}{1.35}
+  \begin{center}
+  \begin{tabular}{@{}p{3.2cm}p{11.8cm}@{}}
+    \rowcolor[HTML]{031d44}
+    {\color{white}\textbf{Requirement}} &
+    {\color{white}\textbf{openADR 3.0}}\\
+    \midrule
+    \textbf{Req.\ \ref{req:universal}}\\ \textit{serves multiple use cases} &
+      Use cases enter as \textbf{profiles} — slices of the API surface — and
+      certification is \textbf{per profile}. The content shared between use
+      cases is the payload schemas of the normative YAML: shared
+      \emph{as an artifact}, not as concepts that can be referenced or
+      imported on their own. \emph{This seems to work!}\\
+    \textbf{Req.\ \ref{req:technology}}\\ \textit{not technology-specific} &
+      OADR 3 is defined as a \textbf{REST + JSON API}; the model content
+      sits inside that description of the transport. The predecessor
+      already marks the pattern: 2.0b (SOAP/XML) and 3.0 (REST/JSON) are
+      two serializations for the same subject matter, each with its own normative
+      description. So openADRm in is current form, is not technology agnostic.\\
+    \textbf{Req.\ \ref{req:consistent}}\\ \textit{no empty sets} &
+      JSON schema classes do not define mathematical sets, \emph{this is cannot be validated.} \\
+    
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \vspace{0.2cm}
+  \begin{center}
+  {\footnotesize The table describes the standard against the requirements.
+  It makes no proposal and offers no remediation.}
+  \end{center}
+\end{frame}

@@ -1,0 +1,41 @@
+\begin{frame}{RDF — the triple}
+  \framesubtitle{Everything is \texttt{subject} \texttt{predicate} \texttt{object}}
+
+  \vspace{0.3em}
+  \centering
+  \begin{tikzpicture}[
+    box/.style={draw, rounded corners=3pt, fill=newlightblue,
+                text=newgray, font=\small, inner sep=6pt, align=left,
+                text width=4.2cm},
+    lit/.style={draw, rounded corners=3pt, fill=orange!15,
+                text=newgray, font=\small, inner sep=6pt, align=left,
+                text width=2.6cm}
+  ]
+    \node[box] (s) at (-1.2,0)
+          {\texttt{<http://example.org/cim/Substation-42>}};
+    \node[box] (t1) at (6.3,1.3)
+          {\texttt{cim:Substation}};
+    \node[lit] (t2) at (6.3,-1.3)
+          {\texttt{"Main Street Substation"}};
+
+    \node[font=\scriptsize\itshape, text=newmidblue, above left=1pt and -3pt of s]
+         {subject};
+
+    \draw[-latex, thick, newdarkblue]
+      (s.east) to[bend left=12]
+        node[pos=0.5, above, font=\scriptsize\itshape, text=newmidblue]
+        {\texttt{rdf:type}}
+      (t1.west);
+    \draw[-latex, thick, newdarkblue]
+      (s.east) to[bend right=8]
+        node[pos=0.5, below=10pt, font=\scriptsize\itshape, text=newmidblue]
+        {\texttt{cim:IdentifiedObject.name}}
+      (t2.west);
+  \end{tikzpicture}
+
+  \vspace{0.5em}
+  \footnotesize
+  Same \texttt{subject} in both triples.
+  The first object is a \emph{resource} (\texttt{cim:Substation});
+  the second is a \emph{literal} (a string).
+\end{frame}

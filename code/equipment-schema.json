@@ -1,0 +1,9 @@
+{
+  "type" : "object",
+  "required" : [ "mRID", "name", "nominalVoltage" ],
+  "properties" : {
+    "mRID" : { "type" : "string" },
+    "name" : { "type" : "string" },
+    "nominalVoltage" : { "type" : "number" }
+  }
+}

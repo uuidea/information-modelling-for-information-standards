@@ -1,0 +1,24 @@
+\subsection{Challenges for integrating information standards}
+\begin{frame}{Challenges for integrating information standards}
+
+    \begin{itemize}
+        \item Information standards are modelled according to different conventions
+        \begin{itemize}
+            \item CIM, INSPIRE $\rightarrow$ UML
+            \item openADR (OpenAPI) $\rightarrow$ OpenAPI
+            \item prov-o $\rightarrow$  OWL
+        \end{itemize}
+        \pause
+        \item Information standards use different terms to define the same concept
+        \item Information standards use the same terms to mean different things
+        \pause
+        \item Information standards are defined from the perspective of a specific domain and are not equally specific about every concept
+        \begin{itemize}
+            %\item CIM cares a lot about PowerSystemResources
+            \item CIM doesn't think of Addresses as identifiable objects
+            \item INSPIRE thinks of a Substation primarily as a point on a map (it models it as an `Appurtenance', as it does switches, transformers etc), you have to look in the AppurtenanceType enumeration to figure out what the object represents
+            \item INSPIRE makes no distinction between Asset and PowerSystemResources
+        \end{itemize}
+    \end{itemize}
+    
+\end{frame}

@@ -1,0 +1,24 @@
+\begin{frame}{The layer model (L0--L3)}
+	\small
+	\begin{columns}[T]
+		\begin{column}{0.62\textwidth}
+			\centering
+			\includegraphics[width=\linewidth, height=0.46\textheight, keepaspectratio]{slides/im-101/three-layers/figs/uml-fourlayers.png}
+		\end{column}
+		\begin{column}{0.38\textwidth}
+			\textbf{L0 Concept hierarchy}\\
+			SKOS: the terms L1 reuses\\[0.45em]
+			\textbf{L1 Information Model}\\
+			open world, reusable, normative definitions\\[0.45em]
+			\textbf{L2 Profile}\\
+			closed world, \emph{adds constraints}\\[0.45em]
+			\textbf{L3 Serializations}\\
+			schema of a specific exchange pattern\\[0.7em]
+			\color{gray}\textbf{L4 Instance data}\\
+			\color{gray}record, row, JSON doc --- \emph{mostly out of scope}
+		\end{column}
+	\end{columns}
+	\vspace{0.4em}
+	\textit{Direction of authority: L0 $<$ L1 $<$ L2 $\vdash$ L3.}\\
+	Never edit an artifact; edit the model above it and regenerate.
+\end{frame}

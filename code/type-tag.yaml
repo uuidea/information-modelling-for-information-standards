@@ -1,0 +1,10 @@
+# how the standard names its types in the serialization
+Equipment:
+  oneOf:
+    - $ref: '.../schemas/Substation'
+    - $ref: '.../schemas/Transformer'
+  discriminator:
+    propertyName: type
+    mapping:
+      '.../Substation' : '.../schemas/Substation'
+      '.../Transformer' : '.../schemas/Transformer'

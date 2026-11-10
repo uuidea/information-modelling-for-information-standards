@@ -1,0 +1,13 @@
+\begin{frame}{The toolchain}
+	\begin{itemize}
+		\item \textbf{L1} \; \textbf{RDFS$/$OWL} — an aligned vocabulary (here CIM IEC 61970-301, with \texttt{owl:equivalentClass})
+		\item \textbf{L2} \; a \textbf{LinkML profile} that imports the IM and narrows it \;$~\Rightarrow$~ \texttt{linkml-shacl} emits the conformance rules
+		\item \textbf{L3} \; \texttt{linkml-avro}, \texttt{linkml-jsonschema}, \texttt{linkml-sql} — one command each, all from \emph{the same} profile
+	\end{itemize}
+	\vspace{0.3em}
+	\begin{minipage}{0.99\linewidth}
+	\lstinputlisting[style=code]{code/pipeline.sh}
+	\end{minipage}
+	\textbf{One profile. Three artifacts. One validator.}\\
+	All of them \emph{generated} in the same CI job; none of them hand-edited.
+\end{frame}

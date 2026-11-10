@@ -1,0 +1,28 @@
+\begin{frame}{Where we stand: NORA/MIM + the W3C stack}
+	\small
+	MIM (\emph{Metamodel voor Informatiemodellen}) — NORA's Informatielaag —
+	splits modelling into five types; in this deck they are L0--L4, and we cover L0--L3.
+	\vspace{0.3em}
+	\footnotesize
+	\setlength{\tabcolsep}{3pt}
+	\begin{center}
+	\begin{tabular}{@{}p{2.7cm}p{3.2cm}p{4.4cm}@{}}
+		\toprule
+		\textbf{MIM type} & \textbf{W3C / formalism} & \textbf{In this deck}\\
+		\midrule
+		Model van begrippen & \textbf{SKOS} vocabulaire & \textbf{L0} Concept hierarchy\\
+		\midrule
+		Conceptueel informatiemodel & \textbf{RDFS} + \textbf{OWL} & \textbf{L1} Information Model\\
+		Logisch informatiemodel & \textbf{SHACL} constraints & \textbf{L2} Profile\\
+		Fysiek / technisch gegevensmodel & \textbf{schema}: Avro, JSON-Schema, SQL & \textbf{L3} Serializations\\
+		\midrule
+		\color{gray}Registraties & \color{gray}instance = record, row, JSON doc & \color{gray}\textbf{L4} runtime data --- \emph{mostly out of scope}\\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\vspace{0.3em}
+	\small
+	The \emph{model van begrippen} is our L0 — a \emph{SKOS} vocabulary:
+	``\emph{een vocabulaire is geen informatiemodel}'' —
+	terms we \emph{reuse}, not design.
+\end{frame}

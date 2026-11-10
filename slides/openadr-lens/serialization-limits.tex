@@ -1,0 +1,28 @@
+\begin{frame}{A serialization cannot be a model}
+  \framesubtitle{What the standard adds to name a type — and what it still cannot do}
+  \begin{columns}[T]
+    \begin{column}{0.53\textwidth}
+      \textbf{The serialization's answer: a \texttt{type} string}\\[0.4em]
+      \lstinputlisting[style=code, basicstyle=\ttfamily\tiny, columns=fullflexible]{code/type-tag.yaml}
+      \vspace{0.2em}
+      \small The discriminator reads the \texttt{"type"} tag the sender writes —
+      it picks a schema; it does not make the data typed.
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \textbf{What stays out of reach}\\[0.4em]
+      \begin{itemize}\scriptsize
+        \item no concept identity: a \texttt{\$defs} entry is a named \emph{schema}, not a kind the value \emph{is} — nothing other standards can reference or align to (no \texttt{owl:equivalentClass} hook)
+        \item no inheritance, no disjointness, no reasoning
+        \item closed \& positional: \emph{extending} a kind = forking the schema
+        \item in a typed model the instance \emph{is} a Substation — and SHACL can require that (\texttt{shacl:class})
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.2em}
+  \begin{alertblock}{So the layers stay where they belong}
+    \small Meaning + type-level validation $\Rightarrow$ RDFS/OWL + SHACL;
+    serialization $\Rightarrow$ JSON Schema / Avro / SQL.
+    OADR 3's normative core is exactly this — the serialization promoted to
+    the model (Req.\ \ref{req:universal}).
+  \end{alertblock}
+\end{frame}

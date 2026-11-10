@@ -1,0 +1,24 @@
+\begin{frame}{L2 — Profile (closed world)}
+	\small
+	A profile \emph{references} an information model and \emph{adds}:
+	\begin{itemize}
+		\item \textbf{scope constraints} — which parts of the Ontology are used
+		\item \textbf{cardinalities} — required / optional / exactly-one
+		\item \textbf{value-space} — closed enums, pattern, range
+
+	\end{itemize}
+	\vspace{0.4em}
+	\begin{columns}[T]
+		\begin{column}{0.5\textwidth}
+			\begin{block}{Closed world}
+				No statement is made if not in-scope. Absence \emph{means} something here.
+			\end{block}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{alertblock}{syntax agnostic}
+				We are just describing what the data looks like, so it can be expressed in any syntax we might need, insuring consistent semantics across syntaxes.
+			\end{alertblock}
+		\end{column}
+	\end{columns}
+	
+\end{frame}

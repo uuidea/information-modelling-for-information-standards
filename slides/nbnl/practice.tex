@@ -1,0 +1,34 @@
+\begin{frame}{How Netbeheer Nederland runs this in practice}
+  \framesubtitle{Observations, not advice — check with your peers}
+  \footnotesize
+  \setlength{\itemsep}{0.5pt}
+  \setlength{\parsep}{0pt}
+
+  \begin{itemize}
+    \item Netbeheer Nederland publishes \textbf{CGMES-based profiles} as the exchange language for grid data between DSOs and the TSO:
+    \begin{itemize}
+      \item documentation: \href{https://modellen.netbeheernederland.nl/cgmes/}{modellen.netbeheernederland.nl/cgmes}
+      \item built on IEC 61970 CIM (the vocabulary) + ENTSO-E CGMES (the Dutch/European profile)
+    \end{itemize}
+    \pause
+    \item The profile is \emph{use-case specific}: congestion calculation, capacity calculation, topology exchange — each is a closed-world subset of the open-world model.
+    \pause
+    \item The schemas (GML/RDF/XML artifacts) are \emph{derived} from the profile, not the other way round — same discipline as in our four-layer stack.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{For DSOs in the Netherlands: the practical consequence}
+  \footnotesize
+  \setlength{\itemsep}{0.5pt}
+  \setlength{\parsep}{0pt}
+
+  \begin{itemize}
+    \item your exchange \emph{must} be expressible in CIM terms, because the other side (TSO, other DSOs, market parties) is already there
+    \item DER assets that want to be \emph{seen} in that exchange need a CIM representation — that is the gap this week closes.
+  \end{itemize}
+
+  \vspace{0.2cm}
+  \begin{block}{Exercise (optional, in pairs)}
+    List the artifacts your openADR flow already produces and mark which already have a CIM counterpart — and which don't.
+  \end{block}
+\end{frame}
